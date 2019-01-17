@@ -1,21 +1,47 @@
+#divGrid {
+  margin:60px;
+  width: 80%;
+  display: grid;
+
+}
+
 #div1 {
-    background-color: green;
+  display:flex;
+  justify-content: space-between;
+    border-style: groove;
     padding: 20px;
+    width: 90%;
+    margin:15px 50px 15px;
+}
+
+h2 {
+  width:50%;
+  
+}
+
+#clock{
+  background-color: red;
+  padding: 20px;
+  width: 30%;
 }
 
 
 #div2 {
-    background-color: blue;
+
+    border-style: groove;
     padding: 20px;
+    width: 90%;
+    margin:5px 50px 5px;
 }
 
 
 
 #div3 {
-    background-color: red;
-    display: grid;
+
     border-style: groove;
-    width: 50%;
+    width: 90%;
+    margin:25px 50px 25px;
+    
 }
 
 #Inputheader{
