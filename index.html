@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../Train-Scheduler/assets/css/stylesheet.css" />
+    <script src="../Train-Scheduler/assets/JS/trainSchedule.js"></script>
+</head>
+<body>
+        <div id = divGrid>
+        <div id = div1></div>
+        <div id = div2></div>
+    <div id = div3>
+    <form>
+        <div class="form-group">
+            <h6 id = "Inputheader">Add Train</h6>
+          <label for="TrainInput">Train Name:</label>
+          <input type="train" class="form-control" id="InputTrain" aria-describedby="Trainhelp" placeholder="Enter train">
+        </div>
+        <div class="form-group">
+          <label for="DestinationInput">Destination</label>
+          <input type="destination" class="form-control" id="InputDestination" placeholder="Destination">
+        </div>
+        <div class="form-group">
+            <label for="TraintimeInput">First Train Time</label>
+            <input type="Traintime" class="form-control" id="TraintimeInput" placeholder="Traintime">
+          </div>
+          <div class="form-group">
+            <label for="FrequencyInput">Frequency (min)</label>
+            <input type="Frquency" class="form-control" id="FrequencyInput" placeholder="Frequency">
+          </div>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> 
+    </div>
+    </div>
+</body>
+</html>
