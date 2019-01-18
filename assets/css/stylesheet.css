@@ -1,49 +1,45 @@
-#divGrid {
-  margin:60px;
-  width: 80%;
-  display: grid;
+body {
+  background-size: cover;
+}
+
+.jumbotron{
+  background-color: whitesmoke;
+  opacity: 0.93;
+  color: black;
 
 }
 
-#div1 {
-  display:flex;
-  justify-content: space-between;
-    border-style: groove;
-    padding: 20px;
-    width: 90%;
-    margin:15px 50px 15px;
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: black;
+  font-size: 60px;
+  font-family: Orbitron;
+  letter-spacing: 7px;
+
+}
+
+.availableTrainsDiv {
+  opacity:0.93;
+}
+
+.trainDiv {
+  opacity:0.93;
 }
 
 h2 {
-  width:50%;
-  
+  width: 50%;
 }
 
-#clock{
-  background-color: red;
+#time {
   padding: 20px;
   width: 30%;
 }
 
 
-#div2 {
-
-    border-style: groove;
-    padding: 20px;
-    width: 90%;
-    margin:5px 50px 5px;
-}
-
-
-
-#div3 {
-
-    border-style: groove;
-    width: 90%;
-    margin:25px 50px 25px;
-    
-}
-
-#Inputheader{
-    background-color: gainsboro;
+form {
+  background-color: whitesmoke;
+  opacity: 0.93;
 }

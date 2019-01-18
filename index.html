@@ -1,46 +1,133 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Train-Scheduler</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="../Train-Scheduler/assets/css/stylesheet.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Train-Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--BS & Stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../Train-Scheduler/assets/css/stylesheet.css"
+    />
+<!--jQuery-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--JavaScript-->
     <script src="../Train-Scheduler/assets/JS/trainSchedule.js"></script>
-</head>
-<body>
-        <div id = divGrid>
-        <div id = div1>
-                      <h2 id = "Title">All Abord!</h2>
-                      <div id = "clock"></div>
+  </head>
+  <body
+    background="assets/css/images/Kings_Cross_Station_Platforms,_London_-_Sept_2007.jpg"
+  >
+
+<!-- Train Tracker-->
+  <div class="container">
+
+<!--Jumbotron-->
+
+    <div class="jumbotron">
+        <h1 class="text-center">All aboard!</h1>
+        <h3 class="text-center">Find your next train here!</h3>
+      </div>
+
+
+<!--Current Train Times-->
+      <div class="availableTrainsDiv">
+      <div class="row">
+          <div class="col-md-12">
+    
+<!-- Current Employees-->
+            <div class="card mb-4">
+              <div class="card-header">Available Trains</div>
+              <div class="card-body">
+                <table class="table table-sm table-hover" id='employee-table'>
+                  <thead>
+                    <tr>
+                      <th scope="col">Train Name</th>
+                      <th scope="col">Destination</th>
+                      <th scope="col">First Train (HH:mm)</th>
+                      <th scope="col">Frequency</th>
+                      <th scope="col">Next Arrival</th>
+                      <th scope="col">Minutes Away</th>
+                      <th scope="col">Remove Train</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
-        <div id = div2>
-                      <h6 id = "Inputheader">Train Schedule</h6>
-        </div>
-    <div id = div3>
-    <form>
-        <div class="form-group">
-            <h6 id = "Inputheader">Add Train</h6>
-          <label for="TrainInput">Train Name:</label>
-          <input type="train" class="form-control" id="InputTrain" aria-describedby="Trainhelp" placeholder="Enter train">
-        </div>
-        <div class="form-group">
-          <label for="DestinationInput">Destination</label>
-          <input type="destination" class="form-control" id="InputDestination" placeholder="Destination">
-        </div>
-        <div class="form-group">
-            <label for="TraintimeInput">First Train Time</label>
-            <input type="Traintime" class="form-control" id="TraintimeInput" placeholder="Traintime">
+
+<!--Find your Train-->
+        <div class="trainDiv">
+        <div class="row">
+            <div class="col-md-12">
+
+
+      <div class="card mb-4">
+          <div class="card-header">Fill in the information of the Train you wish to track!</div>
+          <div class="card-body">
+
+<!--BS Form-->
+        <form>
+          <div class="form-group">
+
+            <label for="TrainInput">Train Name:</label>
+            <input
+              type="train"
+              class="form-control"
+              id="InputTrain"
+              aria-describedby="Trainhelp"
+              placeholder="Enter Train Here"
+            />
+          </div>
+          <div class="form-group">
+            <label for="DestinationInput">Destination</label>
+            <input
+              type="destination"
+              class="form-control"
+              id="InputDestination"
+              placeholder="Enter your Destination"
+            />
+          </div>
+          <div class="form-group">
+            <label for="TraintimeInput"> Train Time</label>
+            <input
+              type="Traintime"
+              class="form-control"
+              id="TraintimeInput"
+              placeholder="Which Train time would you like?"
+            />
           </div>
           <div class="form-group">
             <label for="FrequencyInput">Frequency (min)</label>
-            <input type="Frquency" class="form-control" id="FrequencyInput" placeholder="Frequency">
+            <input
+              type="Frquency"
+              class="form-control"
+              id="FrequencyInput"
+              placeholder="Frequency"
+            />
           </div>
-       
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form> 
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </div>
     </div>
-</body>
+    </div>
+    </div>
+  </body>
 </html>
