@@ -65,4 +65,19 @@ $("#add-train-btn").on("click", function(event) {
 });
 
 // 3. Create a way to retrieve trains from the train database.
+database.ref().on("child_added", function(childSnapshot) {
+  console.log(childSnapshot.val());
 
+  //Storing innputs into a variable.
+  var tName = childSnapshot.val().name;
+  var tDestination = childSnapshot.val().destination;
+  var tTime = childSnapshot.val().time;
+  var tFrequency = childSnapshot.val().frequency;
+
+  // Train info
+  console.log(tName);
+  console.log(tDestination);
+  console.log(tTime);
+  console.log(tFrequency);
+
+});
