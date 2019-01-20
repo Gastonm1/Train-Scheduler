@@ -80,4 +80,8 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(tTime);
   console.log(tFrequency);
 
+  //Using moment to organize
+  var trainPrettify = moment.unix(tTime).format("MM/DD/YYYY");
+
+  
 });
