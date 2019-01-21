@@ -93,14 +93,14 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(tFrequency);
 
   //Using moment to organize
-  var trainPrettify = moment.unix(tTime).format("MM/DD/YYYY");
+  var trainTimePrettify = moment(tTime).format('LT');
 
   // Create the new row with the new information
 
   var newRow = $("<tr>").append(
     $("<td>").text(tName),
     $("<td>").text(tDestination),
-    $("<td>").text(tTime),
+    $("<td>").text(trainTimePrettify),
     $("<td>").text(tFrequency)
     // $("<td>").text(tNextArrival),
     // $("<td>").text(tMinutesAway)
