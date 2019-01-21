@@ -6,6 +6,18 @@
 //5. Calculate Minutes away
 
 //-----------------------------------------------------------------------------------------------
+var clock = document.getElementById('clock');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+  clock.textContent = "The Current Time is: " + h + ":" + m + ":" + s;
+}
+
+setInterval(time, 1000);
+
 
 // 1. Initialize Firebase
 
@@ -83,5 +95,16 @@ database.ref().on("child_added", function(childSnapshot) {
   //Using moment to organize
   var trainPrettify = moment.unix(tTime).format("MM/DD/YYYY");
 
-  
+  // Create the new row with the new information
+
+  var newRow = $("<tr>").append(
+    $("<td>").text(tName),
+    $("<td>").text(tDestination),
+    $("<td>").text(tTime),
+    $("<td>").text(tFrequency)
+    // $("<td>").text(tNextArrival),
+    // $("<td>").text(tMinutesAway)
+  );
+
+  $("#train-table > tbody").append(newRow);
 });
