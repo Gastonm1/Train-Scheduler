@@ -2,11 +2,9 @@
 // 1. Initialize Firebase
 //2. Create a button for adding the new trains > update the html & update the firebase database
 // 3. Create a way to retrieve trains from the train database.
-//4. Create a way to calculate the next arrival time.
-//5. Calculate Minutes away
 
 //-----------------------------------------------------------------------------------------------
-var clock = document.getElementById('clock');
+var clock = document.getElementById("clock");
 
 function time() {
   var d = new Date();
@@ -17,7 +15,6 @@ function time() {
 }
 
 setInterval(time, 1000);
-
 
 // 1. Initialize Firebase
 
@@ -59,7 +56,7 @@ $("#add-train-btn").on("click", function(event) {
     time: tTime,
     frequency: tFrequency
   };
-// Pushes to database
+  // Pushes to database
   database.ref().push(newTrain);
 
   console.log(tName.name);
@@ -93,7 +90,7 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(tFrequency);
 
   //Using moment to organize
-  var trainTimePrettify = moment(tTime).format('LT');
+  var trainTimePrettify = moment(tTime).format("LT");
 
   // Create the new row with the new information
 
@@ -102,8 +99,6 @@ database.ref().on("child_added", function(childSnapshot) {
     $("<td>").text(tDestination),
     $("<td>").text(trainTimePrettify),
     $("<td>").text(tFrequency)
-    // $("<td>").text(tNextArrival),
-    // $("<td>").text(tMinutesAway)
   );
 
   $("#train-table > tbody").append(newRow);
