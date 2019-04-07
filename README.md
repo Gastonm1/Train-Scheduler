@@ -2,13 +2,17 @@
 
 This is a Front-End Train Schedule Application
 
-#Description
-I use firebase to push and pull data from the database. This app will accept user input to add new train name, start time and frequency to schedule. Stores Train info in Firebase for data persistence and retrieves information from database on load. Schedules refresh every minute to reflect updated arrival information.
+# Description
+I use firebase to push and pull data from the database. This app will accept a user input to add new train name, start time and frequency to schedule. The new train information will be stored in Firebase for data persistence. That data will be then be retrieved from Firebase database and sent back to the user (UI/UX)  on load. Schedules refresh every minute to reflect updated arrival information.
 
-#Technology in use
-* Javascript
-* jQuery
+# Technologies in Use
+
 * HTML5
 * CSS3
+* Javascript
+* jQuery
 * Firebase
 * Moment.js
+
+
+If you have any questions, please feel free to contact me: Gaston.marques@gmail.com
